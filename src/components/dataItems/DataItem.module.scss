@@ -1,0 +1,26 @@
+.information {
+  min-height: 87px;
+  display: grid;
+  grid-template-columns: 10% 49% 41%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid #e3e6ec;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.info-text {
+  font-weight: 500;
+  color: #474955;
+  font-size: 13px;
+  border-collapse: collapse;
+}
