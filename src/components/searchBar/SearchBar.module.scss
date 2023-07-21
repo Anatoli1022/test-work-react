@@ -1,0 +1,34 @@
+.wrapper-search {
+  max-width: 630px;
+  padding-bottom: 15px;
+  position: relative;
+  padding-top: 23px;
+}
+
+.search {
+  color: #ffff;
+  border: none;
+  padding-top: 18px;
+  padding-bottom: 15px;
+  padding-left: 26px;
+  font-size: 16px;
+  padding-right: 45px;
+  background-color: #5a5c66;
+  width: 100%;
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: #b2b7bf;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.search-image {
+  position: absolute;
+  top: 38px;
+  right: 24px;
+}
