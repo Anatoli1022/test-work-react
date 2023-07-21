@@ -23,8 +23,6 @@
   font-size: 14px;
   background: none;
   border: none;
- 
-
 
   &:first-child {
     text-transform: uppercase;
@@ -51,5 +49,26 @@
     top: 9px;
     transform: rotate(-40deg);
     right: -33px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .heading {
+    padding-right: 50px;
+    padding-left: 10px;
+  }
+
+  .button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    background: none;
+    border: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 }
