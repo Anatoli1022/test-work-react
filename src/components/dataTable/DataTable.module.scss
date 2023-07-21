@@ -16,11 +16,15 @@
   align-items: center;
 }
 
-.text {
+.button {
   cursor: pointer;
   color: #fff;
   font-weight: 500;
   font-size: 14px;
+  background: none;
+  border: none;
+ 
+
 
   &:first-child {
     text-transform: uppercase;
