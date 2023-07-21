@@ -22,6 +22,7 @@ const DataTable = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  const [active, setActive] = useState('');
 
   const fetchData = async () => {
     try {
@@ -51,10 +52,18 @@ const DataTable = () => {
     const sortedData = filteredData.slice().sort((a, b) => {
       const sortOrder = sortState[column] === 'asc' ? 1 : -1;
 
-      if (column === 'id') return sortOrder * (a.id - b.id);
-      if (column === 'title')
+      if (column === 'id') {
+        setActive('id');
+        return sortOrder * (a.id - b.id);
+      }
+      if (column === 'title') {
+        setActive('title');
         return sortOrder * (a.title.length - b.title.length);
-      if (column === 'body') return sortOrder * (a.body.length - b.body.length);
+      }
+      if (column === 'body') {
+        setActive('body');
+        return sortOrder * (a.body.length - b.body.length);
+      }
 
       return 0;
     });
@@ -68,13 +77,22 @@ const DataTable = () => {
         <SearchBar data={data} setFilteredData={setFilteredData} />
 
         <div className={cx('heading')}>
-          <button className={cx('button')} onClick={() => applySort('id')}>
+          <button
+            className={cx('button', active === 'id' ? 'id-active' : '')}
+            onClick={() => applySort('id')}
+          >
             id
           </button>
-          <button className={cx('button')} onClick={() => applySort('title')}>
+          <button
+            className={cx('button', active === 'title' ? 'title-active' : '')}
+            onClick={() => applySort('title')}
+          >
             Заголовок
           </button>
-          <button className={cx('button')} onClick={() => applySort('body')}>
+          <button
+            className={cx('button', active === 'body' ? 'body-active' : '')}
+            onClick={() => applySort('body')}
+          >
             Описание
           </button>
         </div>
