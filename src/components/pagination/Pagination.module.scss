@@ -1,0 +1,27 @@
+.navigation {
+  margin-top: 24px;
+  padding-bottom: 12px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  color: #474955;
+  line-height: 24px;
+
+}
+
+.active > .button {
+  color: #7ebc3c;
+}
