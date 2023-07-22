@@ -9,6 +9,7 @@ import styles from './DataTable.module.scss';
 const cx = classNames.bind(styles);
 
 const DataTable = () => {
+  const [active, setActive] = useState('');
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +23,6 @@ const DataTable = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const [active, setActive] = useState('');
 
   const fetchData = async () => {
     try {
